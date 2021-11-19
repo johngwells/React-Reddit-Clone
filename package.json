@@ -1,0 +1,41 @@
+{
+  "name": "reddit-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@mikro-orm/cli": "^4.5.9",
+    "@mikro-orm/core": "^4.5.9",
+    "@mikro-orm/migrations": "^4.5.9",
+    "@mikro-orm/postgresql": "^4.5.9",
+    "acorn": "^8.6.0",
+    "acorn-walk": "^8.2.0",
+    "arg": "^4.1.3",
+    "create-require": "^1.1.1",
+    "diff": "^4.0.2",
+    "make-error": "^1.3.6",
+    "pg": "^8.7.1",
+    "yn": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.9",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "watch": "tsc -w",
+    "start": "node dist/index.ts"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
